@@ -1,0 +1,142 @@
+[
+{
+"id":1,
+"name":"Lenovo Legion Gaming Laptop",
+"brand":"Lenovo",
+"category":"Computers",
+"price":"0.00"
+},
+{
+"id":2,
+"name":"HP Omen Gaming Laptop",
+"brand":"HP",
+"category":"Computers",
+"price":"0.00"
+},
+{
+"id":3,
+"name":"Dell Alienware Gaming Laptop",
+"brand":"Dell",
+"category":"Computers",
+"price":"0.00"
+},
+{
+"id":4,
+"name":"ASUS ROG Gaming Laptop",
+"brand":"Asus",
+"category":"Computers",
+"price":"0.00"
+},
+{
+"id":5,
+"name":"MSI Gaming Laptop",
+"brand":"MSI",
+"category":"Computers",
+"price":"0.00"
+},
+{
+"id":6,
+"name":"Microsoft Surface Laptop",
+"brand":"Microsoft",
+"category":"Computers",
+"price":"0.00"
+},
+{
+"id":7,
+"name":"Apple iPhone",
+"brand":"Apple",
+"category":"Phones",
+"price":"0.00"
+},
+{
+"id":8,
+"name":"Apple iPad",
+"brand":"Apple",
+"category":"Tablets",
+"price":"0.00"
+},
+{
+"id":9,
+"name":"Samsung Galaxy Smartphone",
+"brand":"Samsung",
+"category":"Phones",
+"price":"0.00"
+},
+{
+"id":10,
+"name":"Sony Professional Camera",
+"brand":"Sony",
+"category":"Video",
+"price":"0.00"
+},
+{
+"id":11,
+"name":"Roland Music Workstation",
+"brand":"Roland",
+"category":"Music Equipment",
+"price":"0.00"
+},
+{
+"id":12,
+"name":"Akai MPC Controller",
+"brand":"Akai",
+"category":"Music Equipment",
+"price":"0.00"
+},
+{
+"id":13,
+"name":"Elektron Synthesizer",
+"brand":"Elektron",
+"category":"Music Equipment",
+"price":"0.00"
+},
+{
+"id":14,
+"name":"Pioneer DJ Controller",
+"brand":"Pioneer DJ",
+"category":"DJ Equipment",
+"price":"0.00"
+},
+{
+"id":15,
+"name":"Technics Turntable",
+"brand":"Technics",
+"category":"DJ Equipment",
+"price":"0.00"
+},
+{
+"id":16,
+"name":"Rane DJ Mixer",
+"brand":"Rane",
+"category":"DJ Equipment",
+"price":"0.00"
+},
+{
+"id":17,
+"name":"Denon DJ Controller",
+"brand":"Denon DJ",
+"category":"DJ Equipment",
+"price":"0.00"
+},
+{
+"id":18,
+"name":"Martin Professional Stage Lighting",
+"brand":"Martin",
+"category":"Lighting",
+"price":"0.00"
+},
+{
+"id":19,
+"name":"Professional DMX Lighting Controller",
+"brand":"DMX",
+"category":"Lighting",
+"price":"0.00"
+},
+{
+"id":20,
+"name":"VJ Video Projection System",
+"brand":"VJ Equipment",
+"category":"Video",
+"price":"0.00"
+}
+]
