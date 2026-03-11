@@ -1,157 +1,213 @@
-<section id="premium-catalog">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Tech Shop | Oferty Premium</title>
 
-<h2>Katalog Produktów Premium</h2>
+<style>
+body{margin:0;font-family:Arial;background:#f9f9f9;color:#333;}
+header{background:#0b294a;color:white;padding:20px;text-align:center;}
+nav{background:#163f75;padding:15px;text-align:center;}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold;cursor:pointer;}
+section{display:none;padding:40px;max-width:1100px;margin:auto;}
+section.active{display:block;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;}
+.product{background:white;padding:15px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.product h3{margin-top:0;color:#0b294a;}
+.product ul{padding-left:18px;font-size:0.95em;}
+.product .price{font-size:18px;font-weight:bold;color:#b12704;margin-top:8px;}
+button{background:#0b294a;color:white;border:none;padding:10px 18px;border-radius:6px;cursor:pointer;margin-top:10px;}
+input,textarea{width:100%;padding:10px;margin:10px 0;border:1px solid #aaa;border-radius:6px;}
+footer{background:#0b294a;color:white;text-align:center;padding:20px;margin-top:30px;}
+</style>
 
-<div class="shop-grid">
+</head>
+<body>
 
-<!-- REDMAGIC -->
+<header>
+<h1>Premium Tech Shop</h1>
+<p>Smartfony, Laptopy, Mobilne stacje robocze – oferty topowej klasy</p>
+</header>
+
+<nav>
+<a onclick="show('home')">Strona główna</a>
+<a onclick="show('shop')">Sklep</a>
+<a onclick="show('add')">Dodaj ofertę</a>
+<a onclick="show('calc')">Kalkulator</a>
+<a onclick="show('contact')">Kontakt</a>
+</nav>
+
+<!-- -------------------------------- HOME -------------------------------- -->
+<section id="home" class="active">
+<h2>Witamy w Premium Tech Shop</h2>
+<p>Przeglądaj najbardziej pożądane smartfony i laptopy Premium dostępne w naszej ofercie.  
+Możesz dodawać nowe oferty lub obliczać raty leasingu/kredytu dla dowolnego produktu.</p>
+
+<div class="product-grid">
 
 <div class="product">
 <h3>Redmagic 10 Pro</h3>
-<p>Gamingowy smartfon klasy flagowej z ekranem AMOLED 144 Hz oraz systemem chłodzenia aktywnego.</p>
 <ul>
-<li>Procesor: Snapdragon 8 Elite</li>
-<li>Pamięć RAM: 16-24 GB</li>
-<li>Pamięć: 512 GB / 1 TB</li>
-<li>Ekran: AMOLED 6.85" 144 Hz</li>
-<li>Bateria: 7050 mAh</li>
+<li>Gamingowy smartfon z chłodzeniem aktywnym</li>
+<li>Snapdragon 8 Elite</li>
+<li>16–24GB RAM, 512GB/1TB</li>
+<li>AMOLED 6.85" 144Hz</li>
+<li>7050 mAh</li>
 </ul>
-<p class="price">Cena: do edycji</p>
+<p class="price">Cena: (edytuj)</p>
 </div>
 
 <div class="product">
 <h3>Redmagic 9 Pro</h3>
-<p>Smartfon gamingowy z systemem chłodzenia ICE i trybem Game Space.</p>
-<ul>
-<li>Procesor: Snapdragon 8 Gen 3</li>
-<li>RAM: do 16 GB</li>
-<li>Pamięć: do 512 GB</li>
-<li>Ekran: AMOLED 6.8"</li>
-<li>Bateria: 6500 mAh</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Snapdragon 8 Gen 3</li><li>AMOLED 6.8" 120Hz</li><li>16GB RAM</li></ul>
+<p class="price">Cena: (edytuj)</p>
 </div>
 
 <div class="product">
 <h3>Redmagic 8 Pro</h3>
-<p>Flagowy telefon gamingowy z podświetleniem RGB.</p>
-<ul>
-<li>Procesor: Snapdragon 8 Gen 2</li>
-<li>RAM: 12-16 GB</li>
-<li>Pamięć: do 512 GB</li>
-<li>Ekran: AMOLED 120 Hz</li>
-<li>Bateria: 6000 mAh</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Snapdragon 8 Gen 2</li><li>RGB gaming</li><li>AMOLED 120Hz</li></ul>
+<p class="price">Cena: (edytuj)</p>
 </div>
 
+</div>
+</section>
 
-<!-- FLAGOWE SMARTFONY -->
+<!-- -------------------------------- SHOP -------------------------------- -->
+<section id="shop">
+<h2>Sklep – wszystkie oferty Premium</h2>
+<div class="product-grid" id="productList">
+
+<!-- Wstępne produkty z Twojej listy (smartfony) -->
 
 <div class="product">
 <h3>X100 Ultra</h3>
-<p>Smartfon premium z zaawansowanym aparatem fotograficznym.</p>
-<ul>
-<li>Procesor: Snapdragon 8 Gen 3</li>
-<li>RAM: do 16 GB</li>
-<li>Ekran: AMOLED 120 Hz</li>
-<li>Aparat: 200 MP</li>
-<li>Bateria: 5500 mAh</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Flagowy aparat 200 MP</li><li>Snapdragon 8 Gen 3</li><li>AMOLED 120Hz</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
 <div class="product">
 <h3>GT 6 Pro</h3>
-<p>Wysokowydajny smartfon gamingowo-multimedialny.</p>
-<ul>
-<li>Procesor: Snapdragon 8 Gen 3</li>
-<li>RAM: do 16 GB</li>
-<li>Pamięć: 512 GB</li>
-<li>Ekran: AMOLED 144 Hz</li>
-<li>Bateria: 5400 mAh</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Smart‑gaming & multimedia</li><li>Snapdragon 8 Gen 3</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
 <div class="product">
 <h3>Pova 6 Pro</h3>
-<p>Smartfon z bardzo dużą baterią przeznaczony do gier i multimediów.</p>
-<ul>
-<li>Procesor: Dimensity 6080</li>
-<li>RAM: 12 GB</li>
-<li>Pamięć: 256 GB</li>
-<li>Ekran: AMOLED 120 Hz</li>
-<li>Bateria: 6000 mAh</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Dimensity 6080</li><li>12GB RAM</li><li>6000 mAh</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
 <div class="product">
 <h3>Camon 30 Pro</h3>
-<p>Smartfon fotograficzny klasy premium.</p>
-<ul>
-<li>Procesor: Dimensity 8200</li>
-<li>RAM: 12 GB</li>
-<li>Aparat: 50 MP</li>
-<li>Ekran: AMOLED</li>
-<li>Bateria: 5000 mAh</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Fotograficzny smartfon</li><li>Dimensity 8200</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
 <div class="product">
 <h3>Galaxy S Ultra</h3>
-<p>Flagowy smartfon z rysikiem i bardzo wysoką wydajnością.</p>
-<ul>
-<li>Procesor: Snapdragon 8 Gen 3</li>
-<li>RAM: 12-16 GB</li>
-<li>Ekran: Dynamic AMOLED 120 Hz</li>
-<li>Aparat: 200 MP</li>
-<li>Bateria: 5000 mAh</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Premium | Dynamic AMOLED</li><li>Snapdragon 8 Gen 3</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
-
-<!-- LAPTOPY -->
+<!-- Laptopy i stacje robocze -->
 
 <div class="product">
 <h3>ThinkPad X1 Carbon</h3>
-<p>Biznesowy laptop ultralekki dla profesjonalistów.</p>
-<ul>
-<li>Procesor: Intel Core Ultra</li>
-<li>RAM: do 32 GB</li>
-<li>Dysk: 1 TB SSD</li>
-<li>Ekran: 14" OLED</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Intel Core Ultra</li><li>32GB RAM</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
 <div class="product">
 <h3>XPS 15</h3>
-<p>Profesjonalny laptop multimedialny o wysokiej wydajności.</p>
-<ul>
-<li>Procesor: Intel Core i9</li>
-<li>RAM: 32 GB</li>
-<li>Dysk: 1 TB SSD</li>
-<li>Ekran: OLED 3.5K</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Intel Core i9</li><li>OLED 3.5K</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
 <div class="product">
 <h3>ZBook Studio</h3>
-<p>Mobilna stacja robocza dla grafików i inżynierów.</p>
-<ul>
-<li>Procesor: Intel Core i9</li>
-<li>GPU: NVIDIA RTX</li>
-<li>RAM: 32 GB</li>
-<li>Dysk: 2 TB SSD</li>
-</ul>
-<p class="price">Cena: do edycji</p>
+<ul><li>Intel i9</li><li>NVIDIA RTX</li></ul>
+<p class="price">Cena: (edytuj)</p>
+<button onclick="show('calc')">Oblicz ratę</button>
 </div>
 
 </div>
+</section>
+
+<!-- -------------------------------- ADD OFFER -------------------------------- -->
+<section id="add">
+<h2>Dodaj ofertę Premium</h2>
+
+<form id="offerForm">
+<input type="text" id="name" placeholder="Nazwa produktu" required>
+<textarea id="desc" placeholder="Opis produktu" required></textarea>
+<input type="number" id="price" placeholder="Cena">
+<button type="submit">Dodaj ofertę</button>
+</form>
 
 </section>
+
+<!-- -------------------------------- CALCULATOR -------------------------------- -->
+<section id="calc">
+<h2>Kalkulator rat</h2>
+
+<input type="number" id="priceCalc" placeholder="Cena produktu">
+<input type="number" id="monthsCalc" placeholder="Liczba rat">
+<button onclick="calc()">Oblicz</button>
+<p id="result"></p>
+
+</section>
+
+<!-- -------------------------------- CONTACT -------------------------------- -->
+<section id="contact">
+<h2>Kontakt</h2>
+
+<form>
+<input type="text" placeholder="Imię i nazwisko">
+<input type="email" placeholder="Email">
+<textarea placeholder="Wiadomość"></textarea>
+<button>Wyślij</button>
+</form>
+
+</section>
+
+<footer>
+© 2026 Premium Tech Shop – Wszystkie prawa zastrzeżone
+</footer>
+
+<script>
+function show(id){
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"))
+document.getElementById(id).classList.add("active")
+}
+
+document.getElementById("offerForm").addEventListener("submit",function(e){
+e.preventDefault()
+let offer={
+name:document.getElementById("name").value,
+desc:document.getElementById("desc").value,
+price:document.getElementById("price").value
+}
+let offers=JSON.parse(localStorage.getItem("products"))||[]
+offers.push(offer)
+localStorage.setItem("products",JSON.stringify(offers))
+alert("Oferta dodana!")
+})
+
+function calc(){
+let price=document.getElementById("priceCalc").value
+let months=document.getElementById("monthsCalc").value
+let rata=price/months
+document.getElementById("result").innerText="Rata miesięczna: "+rata.toFixed(2)+" zł"
+}
+</script>
+
+</body>
+</html>
