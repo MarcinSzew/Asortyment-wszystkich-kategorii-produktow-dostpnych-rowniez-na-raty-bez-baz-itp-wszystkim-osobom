@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Luksusowy zegarek Model X",
+    "category": "Zegarki luksusowe",
+    "image": "https://via.placeholder.com/300x200.png?text=Zegarek+X",
+    "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "desc": "Ekskluzywny zegarek premium, idealny na prezent.",
+    "params": "Materiał: stal szlachetna, Mechanizm: automatyczny, Wodoszczelność: 50m",
+    "price": 10000,
+    "finance": 5000
+  },
+  {
+    "title": "Hi-End Audio Kolumny Y",
+    "category": "Audio hi-end",
+    "image": "https://via.placeholder.com/300x200.png?text=Kolumny+Y",
+    "video": "",
+    "desc": "Kolumny audio klasy premium dla wymagających audiofilów.",
+    "params": "Moc: 200W, Impedancja: 8Ω, Pasmo: 20Hz-20kHz",
+    "price": 15000,
+    "finance": 8000
+  }
+]
