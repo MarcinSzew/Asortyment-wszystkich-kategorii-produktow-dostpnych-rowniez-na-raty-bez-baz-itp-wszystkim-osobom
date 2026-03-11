@@ -1,32 +1,277 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 
 <head>
-...</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leasing | Kredyt Inwestycyjny | Kredyt Kupiecki</title>
+
+<meta name="description" content="Oferty leasingu, kredytu inwestycyjnego oraz kredytu kupieckiego dla firm. Sprzedaż produktów z możliwością finansowania.">
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f5f5f5;
+}
+
+header{
+background:#004080;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+main{
+padding:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.product{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+input,textarea,select{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+}
+
+button{
+background:#004080;
+color:white;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+}
+
+footer{
+background:#004080;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
 
 <body>
 
 <header>
-...</header>
+
+<h1>Oferty finansowo-sprzedażowe</h1>
+
+<p>Leasing | Kredyt inwestycyjny | Kredyt kupiecki</p>
+
+</header>
 
 <main>
 
-generator ofert
+<h2>Generator oferty produktu</h2>
 
-wyszukiwarka
+<label>Tytuł produktu</label>
+<input type="text" id="title">
 
-filtr kategorii
+<label>Kategoria</label>
+<select id="category">
+
+<option>Elektronika</option>
+<option>Maszyny przemysłowe</option>
+<option>Maszyny budowlane</option>
+<option>Maszyny rolnicze</option>
+<option>Narzędzia</option>
+<option>Motoryzacja</option>
+<option>Energia odnawialna</option>
+<option>Automatyka przemysłowa</option>
+<option>Sprzęt medyczny</option>
+<option>Wyposażenie biura</option>
+
+</select>
+
+<label>Link do zdjęcia</label>
+<input type="text" id="image">
+
+<label>Link do video</label>
+<input type="text" id="video">
+
+<label>Opis / przeznaczenie</label>
+<textarea id="purpose"></textarea>
+
+<label>Parametry techniczne (oddziel przecinkiem)</label>
+<textarea id="params"></textarea>
+
+<label>Kwota finansowania</label>
+<input type="number" id="finance">
+
+<label>Cena rynkowa produktu</label>
+<input type="number" id="market">
+
+<button onclick="generateOffer()">Dodaj ofertę</button>
+
+<hr>
+
+<h2>Wyszukiwarka produktów</h2>
+
+<input type="text" id="search" placeholder="Szukaj produktu..." onkeyup="searchProducts()">
+
+<h2>Filtr kategorii</h2>
+
+<select id="filterCategory" onchange="filterProducts()">
+
+<option value="all">Wszystkie</option>
+<option>Elektronika</option>
+<option>Maszyny przemysłowe</option>
+<option>Maszyny budowlane</option>
+<option>Maszyny rolnicze</option>
+<option>Narzędzia</option>
+<option>Motoryzacja</option>
+
+</select>
 
 <div id="offersContainer"></div>
 
 </main>
 
 <footer>
-kontakt
+
+<h2>Kontakt</h2>
+
+<p>Marcin Szewczyk</p>
+
+<p>profesja.premium@gmail.com</p>
+
+<p>+48 886 636 981</p>
+
 </footer>
 
 <script>
-skrypt
+
+let offers=[];
+
+function generateOffer(){
+
+let title=document.getElementById("title").value;
+let category=document.getElementById("category").value;
+let image=document.getElementById("image").value;
+let video=document.getElementById("video").value;
+let purpose=document.getElementById("purpose").value;
+let params=document.getElementById("params").value.split(",");
+let finance=document.getElementById("finance").value;
+let market=document.getElementById("market").value;
+
+let wholesale=(market*0.7755).toFixed(2);
+let retail=(market*0.84).toFixed(2);
+
+let paramList="";
+
+params.forEach(p=>{
+paramList+="<li>"+p+"</li>";
+});
+
+let offerHTML=`
+
+<div class="product" data-category="${category}">
+
+<h2>${title}</h2>
+
+<img src="${image}" width="300">
+
+<br><br>
+
+<video width="300" controls>
+<source src="${video}" type="video/mp4">
+</video>
+
+<h3>Opis</h3>
+<p>${purpose}</p>
+
+<h3>Parametry</h3>
+
+<ul>${paramList}</ul>
+
+<h3>Finansowanie</h3>
+
+<p>Wnioskowana kwota: ${finance} PLN</p>
+
+<ul>
+<li>Leasing</li>
+<li>Kredyt inwestycyjny</li>
+<li>Kredyt kupiecki</li>
+</ul>
+
+<h3>Ceny sprzedaży</h3>
+
+<p>Cena hurtowa: ${wholesale} PLN</p>
+
+<p>Cena detaliczna: ${retail} PLN</p>
+
+</div>
+
+`;
+
+offers.push(offerHTML);
+
+renderOffers();
+
+}
+
+function renderOffers(){
+
+document.getElementById("offersContainer").innerHTML=offers.join("");
+
+}
+
+function searchProducts(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let products=document.getElementsByClassName("product");
+
+for(let i=0;i<products.length;i++){
+
+let text=products[i].innerText.toLowerCase();
+
+products[i].style.display=text.includes(input)?"block":"none";
+
+}
+
+}
+
+function filterProducts(){
+
+let category=document.getElementById("filterCategory").value;
+
+let products=document.getElementsByClassName("product");
+
+for(let i=0;i<products.length;i++){
+
+let cat=products[i].getAttribute("data-category");
+
+if(category==="all"||cat===category)
+
+products[i].style.display="block";
+
+else
+
+products[i].style.display="none";
+
+}
+
+}
+
 </script>
 
 </body>
+
 </html>
