@@ -1,9 +1,41 @@
-/index.html          -> Strona główna z menu i ofertą Premium
+/index.html
 /kategorie/
     01-smartfony-nubia-redmagic.html
     02-smartfony-vivo.html
     03-smartfony-xiaomi.html
-    ...
-    37-akcesoria-it.html
+    04-smartfony-huawei.html
+    05-smartfony-samsung.html
+    06-smartfony-pova.html
+    07-smartfony-camon.html
+    08-laptopy-lenovo.html
+    09-laptopy-dell.html
+    10-laptopy-hp.html
+    11-laptopy-msi.html
+    12-stacje-robocze-lenovo.html
+    13-stacje-robocze-dell.html
+    14-stacje-robocze-hp.html
+    15-all-in-one.html
+    16-komputery-stacjonarne.html
+    17-monitory-lenovo.html
+    18-monitory-dell.html
+    19-monitory-hp.html
+    20-monitory-msi.html
+    21-akcesoria-it.html
+    22-smartfony-limitowane.html
+    23-tablety.html
+    24-smartwatch.html
+    25-sieci.html
+    26-dyski-twarde.html
+    27-pendrive.html
+    28-sluchawki.html
+    29-kamery.html
+    30-drukarki.html
+    31-grafika.html
+    32-oprogramowanie.html
+    33-zasilanie.html
+    34-klawiatury.html
+    35-myszki.html
+    36-stacje-dokujace.html
+    37-routery.html
+/images/   -> Tutaj wgrywasz zdjęcia produktów
 /sitemap.xml
-/images/             -> Tutaj wgrasz zdjęcia produktów
