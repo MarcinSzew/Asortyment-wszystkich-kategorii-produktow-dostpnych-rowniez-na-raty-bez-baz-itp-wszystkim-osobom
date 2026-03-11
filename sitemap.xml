@@ -6,11 +6,43 @@
   </url>
   <url>
     <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#IT-i-komputery</loc>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Smartfony-i-tablety</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#RTV</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#AGD</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Elektronarzedzia</loc>
     <priority>0.8</priority>
   </url>
-  <!-- Dodaj kolejne kategorie w tym samym stylu -->
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Narzedzia-ogrodowe</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Budownictwo</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Maszyny-budowlane</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Rolnictwo</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/#Gornictwo</loc>
+    <priority>0.8</priority>
+  </url>
+  <!-- Dodaj kolejne 26 kategorii w tym samym formacie -->
 </urlset>
