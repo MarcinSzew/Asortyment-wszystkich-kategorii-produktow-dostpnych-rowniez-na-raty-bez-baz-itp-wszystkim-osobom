@@ -1,13 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Premium IT</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f5f5f5; }
+h1 { color: #1a3e5c; }
+h2 { color: #2a5d84; margin-top: 30px; }
+ul { margin-left: 20px; }
+.product { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.specs { font-size: 0.9em; color: #555; }
+.price { font-weight: bold; color: #c0392b; }
+button { padding: 8px 12px; margin-top: 5px; cursor: pointer; background-color: #2a5d84; color: #fff; border: none; border-radius: 4px; }
+nav a { margin-right: 15px; color: #2a5d84; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+form { margin-top: 30px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+form input, form textarea { width: 100%; margin-bottom: 10px; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+
+<h1>Portal Premium IT</h1>
+
+<nav>
+  <a href="kategorie/01-smartfony-nubia-redmagic.html">Nubia Redmagic</a>
+  <a href="kategorie/02-smartfony-vivo.html">VIVO</a>
+  <a href="kategorie/03-smartfony-xiaomi.html">Xiaomi</a>
+  <a href="kategorie/04-smartfony-huawei.html">Huawei</a>
+  <a href="kategorie/05-smartfony-samsung.html">Samsung</a>
+  <!-- Dodaj linki do pozostałych kategorii -->
+</nav>
+
+<h2>Oferta Premium</h2>
+
 <div class="product">
-  <h3>Redmagic 10 Pro</h3>
+  <h3>Przykładowy produkt</h3>
   <ul>
-    <li>Gamingowy smartfon z chłodzeniem aktywnym</li>
-    <li>Snapdragon 8 Elite</li>
-    <li>16–24GB RAM, 512GB/1TB</li>
-    <li>AMOLED 6.85" 144Hz</li>
-    <li>7050 mAh</li>
+    <li>Opis parametru 1</li>
+    <li>Opis parametru 2</li>
+    <li>Opis parametru 3</li>
   </ul>
-  <p class="price">Cena: (wpisz cenę Premium 77,55%)</p>
-  <img src="/images/redmagic10pro.jpg" alt="Redmagic 10 Pro">
-  <button onclick="alert('Kalkulator ratalny w przygotowaniu')">Oblicz ratę</button>
+  <p class="price">Cena: wprowadź cenę Premium</p>
+  <img src="images/placeholder.jpg" alt="Produkt" style="width:200px;">
+  <button onclick="alert('Kalkulator rat w przygotowaniu')">Oblicz ratę</button>
 </div>
+
+<h2>Formularz kontaktowy</h2>
+<form action="https://formspree.io/f/moqrlrje" method="POST">
+  <input type="text" name="name" placeholder="Twoje imię" required>
+  <input type="email" name="_replyto" placeholder="Twój email" required>
+  <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
+  <button type="submit">Wyślij</button>
+</form>
+
+</body>
+</html>
