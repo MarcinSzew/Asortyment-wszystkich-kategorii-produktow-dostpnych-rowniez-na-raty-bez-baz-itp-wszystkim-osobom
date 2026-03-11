@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pl">
+
 <head>
 
 <meta charset="UTF-8">
@@ -22,6 +23,11 @@ padding:20px;
 text-align:center;
 }
 
+.search{
+text-align:center;
+margin:30px;
+}
+
 .categories{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -33,20 +39,13 @@ padding:30px;
 background:white;
 padding:15px;
 border-radius:6px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-.search{
-text-align:center;
-margin-top:20px;
-}
-
-form{
-margin-top:30px;
+.add{
 background:white;
-padding:20px;
 max-width:500px;
 margin:auto;
+padding:20px;
 }
 
 </style>
@@ -87,56 +86,25 @@ alert("Rata miesięczna: "+wynik+" zł")
 
 <section class="categories">
 
-<div class="category">1 Smartfony Nubia Redmagic</div>
-<div class="category">2 Smartfony Vivo</div>
-<div class="category">3 Smartfony Xiaomi</div>
-<div class="category">4 Smartfony Huawei</div>
-<div class="category">5 Smartfony Samsung</div>
-<div class="category">6 Smartfony Pova</div>
-<div class="category">7 Smartfony Camon</div>
+<div class="category">Smartfony</div>
 
-<div class="category">8 Laptopy Lenovo</div>
-<div class="category">9 Laptopy Dell</div>
-<div class="category">10 Laptopy HP</div>
-<div class="category">11 Laptopy MSI</div>
-<div class="category">12 Laptopy ASUS ROG</div>
-<div class="category">13 Laptopy Alienware</div>
+<div class="category">Sprzęt IT</div>
 
-<div class="category">14 Stacje robocze mobilne</div>
-<div class="category">15 Stacje robocze stacjonarne</div>
+<div class="category">Laptopy</div>
 
-<div class="category">16 Komputery All-in-One</div>
-<div class="category">17 Komputery stacjonarne</div>
-<div class="category">18 Komputery gamingowe</div>
+<div class="category">Stacje robocze</div>
 
-<div class="category">19 Monitory profesjonalne</div>
-<div class="category">20 Monitory gamingowe</div>
+<div class="category">Komputery</div>
 
-<div class="category">21 Akcesoria komputerowe</div>
-<div class="category">22 Klawiatury</div>
-<div class="category">23 Myszy</div>
-<div class="category">24 Słuchawki</div>
+<div class="category">Monitory</div>
 
-<div class="category">25 Karty graficzne</div>
-<div class="category">26 Procesory</div>
-<div class="category">27 Pamięci RAM</div>
-<div class="category">28 Dyski SSD</div>
+<div class="category">Akcesoria komputerowe</div>
 
-<div class="category">29 Serwery</div>
-<div class="category">30 Sprzęt sieciowy</div>
-<div class="category">31 Routery</div>
-<div class="category">32 Switch</div>
-
-<div class="category">33 Drukarki</div>
-<div class="category">34 Skanery</div>
-
-<div class="category">35 Elektronika użytkowa</div>
-<div class="category">36 Sprzęt mobilny</div>
-<div class="category">37 Projekty technologiczne Premium</div>
+<div class="category">Elektronika użytkowa</div>
 
 </section>
 
-<form>
+<div class="add">
 
 <h3>Dodaj ofertę</h3>
 
@@ -146,9 +114,9 @@ alert("Rata miesięczna: "+wynik+" zł")
 
 <textarea placeholder="Opis produktu"></textarea><br><br>
 
-<button type="button" onclick="rata()">Oblicz ratę</button>
+<button onclick="rata()">Oblicz ratę</button>
 
-</form>
+</div>
 
 </body>
 </html>
