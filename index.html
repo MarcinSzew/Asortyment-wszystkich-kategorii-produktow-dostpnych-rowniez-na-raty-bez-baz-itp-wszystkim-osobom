@@ -66,6 +66,24 @@ padding:10px;
 cursor:pointer;
 }
 
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.category{
+background:white;
+padding:15px;
+border-radius:6px;
+}
+
+form{
+background:white;
+padding:20px;
+max-width:500px;
+}
+
 footer{
 background:#0f2942;
 color:white;
@@ -77,13 +95,91 @@ padding:30px;
 
 <script>
 
-function rata(){
+let produkty=[]
 
-let cena=prompt("Podaj cenę produktu")
+function dodajProdukt(){
+
+let nazwa=document.getElementById("nazwa").value
+let cena=document.getElementById("cena").value
+let opis=document.getElementById("opis").value
+
+let produkt={
+nazwa:nazwa,
+cena:cena,
+opis:opis
+}
+
+produkty.push(produkt)
+
+wyswietlProdukty()
+
+}
+
+function wyswietlProdukty(){
+
+let lista=document.getElementById("lista")
+
+lista.innerHTML=""
+
+produkty.forEach(p=>{
+
+lista.innerHTML+=`
+
+<div class="product">
+
+<h3>${p.nazwa}</h3>
+
+<p>${p.opis}</p>
+
+<p class="price">${p.cena} zł</p>
+
+<button onclick="rata(${p.cena})">Oblicz ratę</button>
+
+</div>
+
+`
+
+})
+
+}
+
+function rata(cena){
 
 let wynik=(cena/12).toFixed(2)
 
 alert("Szacowana rata miesięczna: "+wynik+" zł")
+
+}
+
+function szukaj(){
+
+let fraza=document.getElementById("szukaj").value.toLowerCase()
+
+let lista=document.getElementById("lista")
+
+lista.innerHTML=""
+
+produkty
+.filter(p=>p.nazwa.toLowerCase().includes(fraza))
+.forEach(p=>{
+
+lista.innerHTML+=`
+
+<div class="product">
+
+<h3>${p.nazwa}</h3>
+
+<p>${p.opis}</p>
+
+<p class="price">${p.cena} zł</p>
+
+<button onclick="rata(${p.cena})">Oblicz ratę</button>
+
+</div>
+
+`
+
+})
 
 }
 
@@ -99,9 +195,13 @@ alert("Szacowana rata miesięczna: "+wynik+" zł")
 
 <nav>
 
-<a href="index.html">Strona główna</a>
+<a href="#">Strona główna</a>
 
-<a href="kategorie.html">Kategorie produktów</a>
+<a href="#kategorie">Kategorie</a>
+
+<a href="#dodaj">Dodaj ofertę</a>
+
+<a href="#kontakt">Kontakt</a>
 
 </nav>
 
@@ -111,72 +211,72 @@ alert("Szacowana rata miesięczna: "+wynik+" zł")
 
 <h2>Oferta Premium sprzętu IT</h2>
 
-<p>Smartfony • Laptopy • Stacje robocze • Elektronika użytkowa</p>
+<p>Smartfony • Laptopy • Stacje robocze • Elektronika</p>
 
 </section>
 
 <section class="section">
 
-<h2>Produkty Premium</h2>
+<h2>Wyszukiwarka produktów</h2>
 
-<div class="products">
-
-<div class="product">
-
-<h3>Nubia Redmagic</h3>
-
-<p>Gamingowy smartfon</p>
-
-<p class="price">Cena: edytuj</p>
-
-<button onclick="rata()">Oblicz ratę</button>
-
-</div>
-
-<div class="product">
-
-<h3>Lenovo ThinkPad</h3>
-
-<p>Laptop biznesowy</p>
-
-<p class="price">Cena: edytuj</p>
-
-<button onclick="rata()">Oblicz ratę</button>
-
-</div>
-
-<div class="product">
-
-<h3>Dell Precision</h3>
-
-<p>Mobilna stacja robocza</p>
-
-<p class="price">Cena: edytuj</p>
-
-<button onclick="rata()">Oblicz ratę</button>
-
-</div>
-
-</div>
+<input id="szukaj" onkeyup="szukaj()" placeholder="Szukaj produktu...">
 
 </section>
 
 <section class="section">
 
-<h2>Usługi finansowe</h2>
+<h2>Oferty Premium</h2>
 
-<p>
-
-• Leasing sprzętu IT<br>
-• Kredyt inwestycyjny<br>
-• Kredyt kupiecki<br>
-• Finansowanie zakupów technologicznych
-
-</p>
+<div id="lista" class="products"></div>
 
 </section>
 
-<section class="section">
+<section id="kategorie" class="section">
+
+<h2>37 kategorii produktów</h2>
+
+<div class="categories">
+
+<div class="category">Smartfony</div>
+<div class="category">Laptopy</div>
+<div class="category">Stacje robocze</div>
+<div class="category">Komputery</div>
+<div class="category">Monitory</div>
+<div class="category">Akcesoria komputerowe</div>
+<div class="category">Karty graficzne</div>
+<div class="category">Procesory</div>
+<div class="category">Pamięci RAM</div>
+<div class="category">Dyski SSD</div>
+<div class="category">Serwery</div>
+<div class="category">Routery</div>
+<div class="category">Switch</div>
+<div class="category">Drukarki</div>
+<div class="category">Skanery</div>
+<div class="category">Elektronika użytkowa</div>
+
+</div>
+
+</section>
+
+<section id="dodaj" class="section">
+
+<h2>Dodaj ofertę</h2>
+
+<form onsubmit="event.preventDefault(); dodajProdukt();">
+
+<input id="nazwa" placeholder="Nazwa produktu"><br><br>
+
+<input id="cena" type="number" placeholder="Cena"><br><br>
+
+<textarea id="opis" placeholder="Opis produktu"></textarea><br><br>
+
+<button type="submit">Dodaj produkt</button>
+
+</form>
+
+</section>
+
+<section id="kontakt" class="section">
 
 <h2>Kontakt</h2>
 
@@ -198,7 +298,7 @@ Marcin Szewczyk<br>
 
 <textarea placeholder="Treść zapytania"></textarea><br><br>
 
-<button type="submit">Wyślij</button>
+<button>Wyślij</button>
 
 </form>
 
