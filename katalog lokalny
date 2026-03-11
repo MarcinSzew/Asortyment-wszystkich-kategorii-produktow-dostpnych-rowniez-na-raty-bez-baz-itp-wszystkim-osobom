@@ -1,4 +1,2 @@
-index.html                  <- Strona startowa z ofertą Premium
-/kategorie/                  <- Folder z podstronami kategorii (37 plików)
-sitemap.xml                  <- Plik do SEO
-/images/                     <- Folder na zdjęcia produktów (może być pusty na start)
+git clone https://github.com/marcinszew/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty.git
+cd Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty
