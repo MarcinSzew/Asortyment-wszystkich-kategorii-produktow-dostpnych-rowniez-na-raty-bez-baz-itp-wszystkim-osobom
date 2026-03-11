@@ -3,47 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Premium IT i Smartfony</title>
+<title>01 - Smartfony Nubia Redmagic</title>
 <style>
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
-header { background-color: #1a3e5c; color: #fff; padding: 20px; text-align: center; }
-nav { background-color: #2a5d84; padding: 10px; text-align: center; }
-nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f5f5f5; }
+h1 { color: #1a3e5c; }
+nav a { margin-right: 15px; color: #2a5d84; text-decoration: none; font-weight: bold; }
 nav a:hover { text-decoration: underline; }
-.container { padding: 20px; }
-h1 { color: #1a3e5c; text-align: center; }
-h2 { color: #2a5d84; margin-top: 30px; }
 .category { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.category h3 { margin-top: 0; }
-.product { margin-bottom: 15px; }
+.product { margin-bottom: 20px; }
 .product ul { margin-left: 20px; }
 .price { font-weight: bold; color: #c0392b; }
-button { padding: 8px 12px; margin-top: 5px; cursor: pointer; background-color: #2a5d84; color: #fff; border: none; border-radius: 4px; }
-footer { background-color: #1a3e5c; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
-form input, form textarea { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc; }
+button { padding: 8px 12px; cursor: pointer; background-color: #2a5d84; color: #fff; border: none; border-radius: 4px; margin-top: 5px; }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Portal Premium IT i Smartfony</h1>
-  <p>Usługi finansowe i produkty najwyższej klasy</p>
-</header>
+<h1>Smartfony Nubia Redmagic</h1>
 
 <nav>
-  <a href="#premium">Oferta Premium</a>
-  <a href="#finansowanie">Finansowanie</a>
+  <a href="../index.html">Strona główna</a>
   <a href="#kontakt">Kontakt</a>
-  <a href="#kategorie">Kategorie</a>
+  <a href="02-smartfony-vivo.html">VIVO</a>
+  <a href="03-smartfony-xiaomi.html">Xiaomi</a>
+  <!-- Dodaj linki do pozostałych kategorii -->
 </nav>
 
-<div class="container">
-
-<h2 id="premium">Oferta Premium</h2>
 <div class="category">
-  <h3>Smartfony Nubia Redmagic</h3>
+
   <div class="product">
-    <h4>Redmagic 10 Pro</h4>
+    <h3>Redmagic 10 Pro</h3>
     <ul>
       <li>Gamingowy smartfon z chłodzeniem aktywnym</li>
       <li>Snapdragon 8 Elite</li>
@@ -51,35 +39,16 @@ form input, form textarea { width: 100%; padding: 8px; margin-bottom: 10px; bord
       <li>AMOLED 6.85" 144Hz</li>
       <li>7050 mAh</li>
     </ul>
-    <p class="price">Cena: (edytuj)</p>
+    <p class="price">Cena: (wprowadź cenę)</p>
+    <img src="../images/placeholder.jpg" alt="Redmagic 10 Pro" style="width:200px;">
     <button onclick="alert('Kalkulator rat w przygotowaniu')">Oblicz ratę</button>
   </div>
-  <!-- Dodaj więcej produktów w tej kategorii analogicznie -->
+
+  <!-- Dodaj kolejne produkty analogicznie -->
 </div>
 
-<h2 id="finansowanie">Opcje finansowania</h2>
-<div class="category">
-  <h3>Zwykła oferta</h3>
-  <p>Cena: 84% najniższej ceny rynkowej</p>
-  <h3>Oferta Premium</h3>
-  <p>Cena: 77,55% najniższej ceny rynkowej w globalnej umowie (O.W.U.)</p>
-</div>
-
-<h2 id="kategorie">Kategorie produktów (przykładowo)</h2>
-<div class="category">
-  <h3>Smartfony</h3>
-  <ul>
-    <li><a href="kategorie/01-smartfony-nubia-redmagic.html">Nubia Redmagic</a></li>
-    <li><a href="kategorie/02-smartfony-vivo.html">VIVO</a></li>
-    <li><a href="kategorie/03-smartfony-xiaomi.html">Xiaomi</a></li>
-    <li><a href="kategorie/04-smartfony-huawei.html">Huawei</a></li>
-    <li><a href="kategorie/05-smartfony-samsung.html">Samsung</a></li>
-    <!-- Dodaj pozostałe kategorie od 6 do 37 -->
-  </ul>
-</div>
-
-<h2 id="kontakt">Kontakt</h2>
-<div class="category">
+<div id="kontakt" class="category">
+  <h2>Kontakt</h2>
   <p>Osoba do kontaktu: <strong>Marcin Szewczyk</strong></p>
   <p>Email: <a href="mailto:profesja.premium@gmail.com">profesja.premium@gmail.com</a></p>
   <p>Telefon: +48 886 636 981</p>
@@ -93,12 +62,6 @@ form input, form textarea { width: 100%; padding: 8px; margin-bottom: 10px; bord
     <button type="submit">Wyślij zapytanie</button>
   </form>
 </div>
-
-</div>
-
-<footer>
-  <p>Portal Premium IT & Smartfony © 2026</p>
-</footer>
 
 </body>
 </html>
