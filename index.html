@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oferty finansowo‑sprzedażowe Premium</title>
-<meta name="description" content="Ekskluzywne oferty produktów premium i luksusowych z możliwością finansowania: leasing, kredyt inwestycyjny, kredyt kupiecki.">
+<title>Najwyższej jako 1-ej klasy profesjonalne zarazem luksusowe oferty handlowe dostępne również na raty bez baz itp weryfikacji finansowych</title>
+<meta name="description" content="Oferty Premium dostępne również na raty. Możliwość pełnej edycji i dodawania własnych produktów.">
+
 <style>
 body { font-family: Arial; margin:0; background:#f2f2f2;}
 header { background:#003366; color:white; padding:30px; text-align:center;}
@@ -18,21 +19,53 @@ footer { background:#003366; color:white; text-align:center; padding:25px; margi
 </head>
 <body>
 <header>
-<h1>Oferty Premium Luksusowe</h1>
-<p>Leasing • Kredyt inwestycyjny • Kredyt kupiecki</p>
+<h1>Najwyższej jako 1-ej klasy profesjonalne zarazem luksusowe oferty handlowe dostępne również na raty bez baz itp weryfikacji finansowych</h1>
 </header>
 
 <main>
 <section>
-<h2>Wyszukiwarka ofert</h2>
-<input id="search" placeholder="Szukaj..." onkeyup="searchOffer()">
+<h2>Dodaj nową ofertę Premium</h2>
+
+<label>Nazwa produktu</label>
+<input id="title">
+
+<label>Kategoria</label>
+<select id="category">
+<option>Elektronika premium</option>
+<option>Audio hi-end</option>
+<option>Zegarki luksusowe</option>
+<option>Moda premium</option>
+<option>Motoryzacja premium</option>
+<option>Sprzęt medyczny premium</option>
+<option>Luksusowe AGD</option>
+<option>Wyposażenie biura premium</option>
+<!-- Dodaj inne kategorie według potrzeb -->
+</select>
+
+<label>Link do zdjęcia</label>
+<input id="image">
+
+<label>Link do wideo</label>
+<input id="video">
+
+<label>Opis / funkcja</label>
+<textarea id="desc"></textarea>
+
+<label>Parametry techniczne</label>
+<textarea id="params"></textarea>
+
+<label>Cena rynkowa (PLN)</label>
+<input type="number" id="price">
+
+<label>Kwota finansowania (PLN)</label>
+<input type="number" id="finance">
+
+<button onclick="addOffer()">Dodaj ofertę</button>
 </section>
 
 <section>
-<h2>Filtr kategorii</h2>
-<select id="filterCategory" onchange="filterOffer()">
-<option value="all">Wszystkie</option>
-</select>
+<h2>Wyszukiwarka ofert Premium</h2>
+<input id="search" placeholder="Szukaj..." onkeyup="searchOffer()">
 </section>
 
 <section>
@@ -49,97 +82,63 @@ footer { background:#003366; color:white; text-align:center; padding:25px; margi
 </footer>
 
 <script>
-// 37 kategorii
-const categories = [
-"Elektronika premium","Audio hi-end","Zegarki luksusowe","Moda premium","Motoryzacja premium",
-"Sprzęt medyczny premium","Luksusowe AGD","Wyposażenie biura premium","Wyposażenie sklepów premium",
-"Meble premium","Oświetlenie premium","Sprzęt sportowy premium","Artykuły dziecięce premium",
-"Zabawki premium","Odzież i akcesoria premium","Biżuteria premium","Torby i walizki premium",
-"Kosmetyki premium","Produkty zdrowotne premium","Artykuły gospodarstwa domowego premium",
-"Sprzęt AGD premium","Produkty ogrodowe premium","Materiały budowlane premium","Chemia przemysłowa premium",
-"Surowce premium","Materiały tekstylne premium","Opakowania premium","Produkty spożywcze premium",
-"Sprzęt gastronomiczny premium","Systemy bezpieczeństwa premium","Transport i logistyka premium",
-"Urządzenia testowe premium","Usługi produkcyjne premium","Motoryzacja sportowa premium",
-"Elektronika luksusowa","Moda luksusowa","Wyposażenie hotelowe premium","Sprzęt fitness premium"
-];
-
-// dodaj do filtra
-const filterSelect = document.getElementById("filterCategory");
-categories.forEach(cat=>{
-let option = document.createElement("option");
-option.text = cat;
-option.value = cat;
-filterSelect.add(option);
-});
-
-// 5 przykładowych ofert na kategorię
 let offers=[];
-categories.forEach(cat=>{
-for(let i=1;i<=5;i++){
-let title = `${cat} Produkt ${i}`;
-let image = "https://via.placeholder.com/300x200.png?text="+encodeURIComponent(title);
-let video = "https://www.w3schools.com/html/mov_bbb.mp4";
-let desc = `Opis produktu ${i} kategorii ${cat}.`;
-let params = `Parametr1: X, Parametr2: Y, Parametr3: Z`;
-let price = (1000 + i*100);
-let finance = (price*0.5).toFixed(2);
-let wholesale = (price*0.7755).toFixed(2);
-let retail = (price*0.84).toFixed(2);
+
+// Funkcja dodawania nowej oferty
+function addOffer(){
+let title=document.getElementById("title").value;
+let category=document.getElementById("category").value;
+let image=document.getElementById("image").value;
+let video=document.getElementById("video").value;
+let desc=document.getElementById("desc").value;
+let params=document.getElementById("params").value;
+let price=document.getElementById("price").value;
+let finance=document.getElementById("finance").value;
+
+if(!title || !category) { alert("Wpisz nazwę produktu i wybierz kategorię."); return; }
+
+let wholesale=(price*0.7755).toFixed(2);
+let retail=(price*0.84).toFixed(2);
 
 offers.push({
-title,cat,image,video,desc,params,price,finance,wholesale,retail
+title, category, image, video, desc, params, price, finance, wholesale, retail
 });
+renderOffers();
 }
-});
 
-// render ofert
-const offersContainer = document.getElementById("offers");
+// Renderowanie ofert w HTML
 function renderOffers(){
-offersContainer.innerHTML = "";
+const container=document.getElementById("offers");
+container.innerHTML="";
 offers.forEach(o=>{
-let div = document.createElement("div");
+let div=document.createElement("div");
 div.className="product";
-div.setAttribute("data-category",o.cat);
-div.innerHTML = `
+div.setAttribute("data-category",o.category);
+div.innerHTML=`
 <h3>${o.title}</h3>
-<p><b>Kategoria:</b> ${o.cat}</p>
-<img src="${o.image}" width="300">
+<p><b>Kategoria:</b> ${o.category}</p>
+${o.image ? `<img src="${o.image}" width="300">` : ""}
 <br><br>
-<video width="300" controls>
-<source src="${o.video}" type="video/mp4">
-</video>
+${o.video ? `<video width="300" controls><source src="${o.video}" type="video/mp4"></video>` : ""}
 <p><b>Opis:</b> ${o.desc}</p>
 <p><b>Parametry:</b> ${o.params}</p>
 <p><b>Finansowanie:</b> ${o.finance} PLN</p>
 <p><b>Cena hurtowa:</b> ${o.wholesale} PLN</p>
 <p><b>Cena detaliczna:</b> ${o.retail} PLN</p>
 `;
-offersContainer.appendChild(div);
+container.appendChild(div);
 });
 }
-renderOffers();
 
-// wyszukiwarka
+// Wyszukiwarka
 function searchOffer(){
-let input = document.getElementById("search").value.toLowerCase();
-let products = document.getElementsByClassName("product");
+let input=document.getElementById("search").value.toLowerCase();
+let products=document.getElementsByClassName("product");
 for(let i=0;i<products.length;i++){
-let text = products[i].innerText.toLowerCase();
-products[i].style.display = text.includes(input) ? "block" : "none";
-}
-}
-
-// filtr kategorii
-function filterOffer(){
-let category = document.getElementById("filterCategory").value;
-let products = document.getElementsByClassName("product");
-for(let i=0;i<products.length;i++){
-let cat = products[i].getAttribute("data-category");
-if(category==="all"||cat===category) products[i].style.display="block";
-else products[i].style.display="none";
+let text=products[i].innerText.toLowerCase();
+products[i].style.display=text.includes(input)?"block":"none";
 }
 }
 </script>
-
 </body>
 </html>
